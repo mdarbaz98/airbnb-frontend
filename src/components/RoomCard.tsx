@@ -4,26 +4,36 @@
 // - hosted by
 // - price
 
-import { Card, Image, Stack, Text } from "@chakra-ui/react";
+import { Grid, Image, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 
 type Props = {};
 
 export default function RoomCard({}: Props) {
   return (
-    <Stack maxW={"md"}>
-      <Image
-        src="https://a0.muscache.com/im/pictures/ce537598-32d5-4b0d-907c-463e8a18ab87.jpg?im_w=720"
-        alt="Room Image"
-        rounded="md"
-        overflow="hidden"
-        objectFit="cover"
-      />
+    <Stack>
+      <Grid>
+        <Image
+          src="https://a0.muscache.com/im/pictures/ce537598-32d5-4b0d-907c-463e8a18ab87.jpg"
+          alt="Room Image"
+          rounded="2xl"
+          overflow="hidden"
+          aspectRatio={"1/1"}
+          objectFit="cover"
+        />
+      </Grid>
       <Stack spacing={0}>
-        <Text>Beautiful Room</Text>
-        <p>Hosted by John Doe</p>
+        <Text fontWeight={600}>Beautiful Room</Text>
+        <Text color={"gray"}>Hosted by John Doe</Text>
       </Stack>
-      <Text>$150 per night</Text>
+      <Text fontWeight={600}>
+        $150
+        <Text ms={1} as={"span"} fontWeight={400}>
+          night
+        </Text>
+      </Text>
     </Stack>
   );
 }
+
+// https://www.youtube.com/watch?v=GJPEgai_dKw
