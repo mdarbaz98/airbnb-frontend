@@ -1,5 +1,8 @@
+"use client";
+import BookingModal from "@/components/BookingModal";
 import Footer from "@/components/includes/Footer";
 import Header from "@/components/includes/Header";
+import theme from "@/styles/theme";
 import { ChakraProvider, Container } from "@chakra-ui/react";
 
 export default function MainLayout({
@@ -9,12 +12,13 @@ export default function MainLayout({
 }) {
   return (
     <>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Header />
         <Container maxW={"container.xl"} p={2}>
           {children}
         </Container>
         <Footer />
+        <BookingModal />
       </ChakraProvider>
     </>
   );

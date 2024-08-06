@@ -4,10 +4,10 @@ const theme = extendTheme({
   styles: {
     global: {
       html: {
-        fontSize: "14px",
+        // fontSize: "14px",
       },
       body: {
-        bg: "white",
+        bg: "gray.50",
         color: "black",
       },
     },

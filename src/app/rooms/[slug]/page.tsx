@@ -1,18 +1,24 @@
 import DatePicker from "@/components/DatePicker";
-import ListItem from "@/components/mini/ListItem";
 import UserAvatar from "@/components/mini/UserAvatar";
 import MainLayout from "@/layouts/MainLayout";
 import {
   Box,
+  Button,
+  Card,
+  CardBody,
   Grid,
   GridItem,
   HStack,
   Image,
+  ListIcon,
+  ListItem,
+  SimpleGrid,
   Stack,
   StackDivider,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import { FaWifi } from "react-icons/fa6";
 
 type Props = {};
 
@@ -46,8 +52,8 @@ export default function page({}: Props) {
             ))}
           </Grid>
           <Grid templateColumns={{ lg: "repeat(12, 1fr)" }} gap={2}>
-            <GridItem colSpan={{ lg: 7 }}>
-              <Stack
+            <GridItem colSpan={{ lg: 8 }}>
+              {/* <Stack
                 spacing={6}
                 divider={<StackDivider borderColor="gray.200" />}
               >
@@ -79,9 +85,61 @@ export default function page({}: Props) {
                   iste soluta nesciunt voluptatibus adipisci.
                 </Text>
                 <DatePicker />
+              </Stack> */}
+              <Stack spacing={6}>
+                <HStack gap={6}>
+                  <Box>
+                    <Text
+                      as={"h2"}
+                      fontSize={{ lg: "3xl", base: "xl" }}
+                      fontWeight={600}
+                    >
+                      Nono-Wada style Pool villa, forest view &gazebo
+                    </Text>
+                    <Text as={"h3"} fontSize={{ lg: "xl" }} fontWeight={600}>
+                      Entire villa in Velhe, Torna-Rajgad, India
+                    </Text>
+                    <Text color={"gray.700"}>
+                      9 guests3 bedrooms3 beds3.5 bathrooms
+                    </Text>
+                  </Box>
+                  <Box>
+                    <Button w={"fit-content"} colorScheme="blue">
+                      Check availability
+                    </Button>
+                  </Box>
+                </HStack>
+                <Card>
+                  <CardBody
+                    as={Stack}
+                    divider={<StackDivider borderColor="gray.200" />}
+                    spacing={6}
+                    p={{ base: 3, lg: 6 }}
+                  >
+                    <Text>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Quo dolores totam aspernatur, voluptatem ea suscipit rem
+                      maiores, voluptas impedit dolorem doloribus voluptates
+                      quia, numquam modi deserunt nostrum possimus labore!
+                      Molestiae. Lorem ipsum dolor sit, amet consectetur
+                      adipisicing elit. Quo dolores totam aspernatur, voluptatem
+                      ea suscipit rem maiores, voluptas impedit dolorem
+                      doloribus voluptates quia, numquam modi deserunt nostrum
+                      possimus labore! Molestiae.
+                    </Text>
+                    <SimpleGrid columns={[2, 3]} gap={6}>
+                      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, idx) => (
+                        <GridItem as={HStack} key={idx}>
+                          <FaWifi />
+                          <Text>Wifi Available</Text>
+                        </GridItem>
+                      ))}
+                    </SimpleGrid>
+                  </CardBody>
+                </Card>
               </Stack>
             </GridItem>
-            <GridItem colSpan={{ lg: 5 }}>2</GridItem>
+            <GridItem colSpan={{ lg: 4 }}>2</GridItem>
           </Grid>
         </Stack>
       </MainLayout>
