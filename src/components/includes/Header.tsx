@@ -16,7 +16,7 @@ type Props = {};
 
 export default function Header({}: Props) {
   return (
-    <Box borderBottom={1} borderStyle={"solid"} borderColor={"gray.200"}>
+    <Box borderBottom={1}>
       <Container maxW={"container.xl"} p={2}>
         <Flex
           minH={{ base: "50px" }}

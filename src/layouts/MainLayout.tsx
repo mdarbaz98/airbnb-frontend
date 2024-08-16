@@ -1,5 +1,5 @@
 "use client";
-import BookingModal from "@/components/BookingModal";
+import BookingModal from "@/components/modals/BookingModal";
 import Footer from "@/components/includes/Footer";
 import Header from "@/components/includes/Header";
 import theme from "@/styles/theme";

@@ -26,7 +26,7 @@ export default function page({}: Props) {
   return (
     <>
       <MainLayout>
-        <Stack spacing={6} py={6}>
+        <Stack spacing={6}>
           <Grid
             templateRows={{ lg: "repeat(2, 1fr)" }}
             templateColumns={{ lg: "repeat(3, 1fr)" }}

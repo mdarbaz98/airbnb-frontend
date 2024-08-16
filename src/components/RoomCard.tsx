@@ -46,11 +46,12 @@ export default function RoomCard({}: Props) {
     // </Stack>
     <Stack as={Card} overflow={"hidden"}>
       <Image
-        src="https://a0.muscache.com/im/pictures/ce537598-32d5-4b0d-907c-463e8a18ab87.jpg"
+        // src="https://a0.muscache.com/im/pictures/ce537598-32d5-4b0d-907c-463e8a18ab87.jpg"
         alt="Room Image"
         maxH={"200px"}
         aspectRatio={"1/1"}
         objectFit="cover"
+        fallbackSrc="https://via.placeholder.com/150"
       />
       <CardBody>
         <HStack justifyContent={"space-between"} alignItems={"start"} mb={3}>
